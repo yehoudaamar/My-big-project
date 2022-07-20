@@ -6,6 +6,7 @@ const viewsPath = path.join(__dirname + '/../views');
 const HomeRouter = require('../routes/Home.router');
 const LoginRouter = require('../routes/Login.router');
 const SinginRouter = require('../routes/Singin.router');
+const cookieParser = require("cookie-parser");
 
 const router = express.Router();
 
@@ -25,7 +26,7 @@ app.use('/', HomeRouter);
 
 
 
-app.listen(3121, () => {
-    console.log('server is running on port 3121');
+app.listen(3221, () => {
+    console.log('server is running on port 3221');
 }
 );
