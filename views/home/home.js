@@ -10,6 +10,7 @@ const Btn_Singin = document.querySelector('.nav_btn_singin');
 // const Form_singin_data = document.querySelector('.form_singin');
 // const x_singin = document.getElementById("xs");
 const my_name = document.querySelector('#my_name');
+const i = document.querySelector('#i');
 
 
 
@@ -22,7 +23,9 @@ const cookies = document.cookie;
 if (cookies.length > 0 === true) {
     Btn_Singin.style.display = 'none';
     Btn_Login.style.display = 'none';
-    my_name.innerHTML = my_name_cookie + "  " + "שלום " + "<a href='/logout' method='post' >Logout</a>";
+    i.style.display = 'none';
+    my_name.style.display = 'block';
+    my_name.innerHTML = my_name_cookie + "  "  + "<a href='/logout' id='logout' method='post' >יציאה</a>";
 
 }
 

@@ -3,7 +3,7 @@ const path = require('path');
 const Userspath = path.join(__dirname + '/../data/users.json');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
-const { log } = require('console');
+
 const saltRounds = 10;
 
 function ReadUsers() {
@@ -29,7 +29,7 @@ async  function SliceUsers(email) {
 
 
 
-function AddaUser(user) {
+  function AddaUser(user) {
     const MyUsers = ReadUsers();
   
     MyUsers.push(user);

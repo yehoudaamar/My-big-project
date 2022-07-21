@@ -19,11 +19,36 @@ router.post("/", async (req, res) => {
 
     // console.log(password)
 
+    const myData = ApiUser.ReadUsers()
+
     const pswHash = await ApiUser.hashpsw(pass);
     data.password = pswHash
 
-    ApiUser.AddaUser(data);
-    res.end();
+
+
+       myData.forEach(o => {
+            const email = data.email
+            if (o.email === `${email}`) {
+                console.log("email exist")
+            }
+            if (o.email !== `${email}`) {
+                console.log("email not exist")
+            }
+        }
+        )
+    ApiUser.AddaUser(data)
+
+
+
+
+
+    // const myData = await ApiUser.ReadUsers();
+
+
+
+
+
+
 })
 
 

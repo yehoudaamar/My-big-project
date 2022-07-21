@@ -6,7 +6,7 @@ const check_user = function(data){
 
 
     if (data.email === "" || data.password === "" || data.name === "") {
-        alert("מלא את כל השדות");
+        // alert("מלא את כל השדות");
         return false;
     }
 
@@ -23,7 +23,7 @@ const check_user = function(data){
     } if (data.name.length < 3) {
         alert("שם קצר מדי");
         return false;
-    } if (data.name.length > 50) {
+    } if (data.name.length > 20) {
         alert("שם ארוך מדי");
         return false;
     }

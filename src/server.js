@@ -6,7 +6,6 @@ const viewsPath = path.join(__dirname + '/../views');
 const HomeRouter = require('../routes/Home.router');
 const LoginRouter = require('../routes/Login.router');
 const SinginRouter = require('../routes/Singin.router');
-const cookieParser = require("cookie-parser");
 
 const router = express.Router();
 
